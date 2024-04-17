@@ -8,6 +8,7 @@ But if any problems come up, do not hesitate to contact us (lorenz.lamm@helmholt
 Make sure to have git installed, then run
 ```shell
 git clone https://github.com/teamtomo/membrain-seg.git
+
 conda create --name <env_name> python=3.9
 conda activate <env_name>
 
