@@ -31,18 +31,9 @@ class MemBrain_pipeline:
 
     def create_title_label(self):
         # Method to create the title label
-        title_options = {
-            'text': "MemBrain - pipeline",
-            'font': ('Helvetica', 12, 'bold'),
-            'background': 'limegreen',
-            'justify': 'center',
-            'borderwidth': 2,
-            'relief': 'solid'
-        }
-        title_label = Label(self.master, **title_options)
+        title_label = Label(self.master, text="MemBrain - SETUP", font=('Helvetica', 14, 'bold'), background='chartreuse2', foreground='white', pady=10, padx=10)
         title_label.grid(row=0, column=0, columnspan=2, sticky="ew")
         title_label.config(wraplength=500)
-        Label(self.master, **title_options).grid(row=0, column=0, columnspan=2, sticky="nsew")
         tk.Label(self.master, text="").grid(row=1, column=0, columnspan=2, sticky="nsew")
 
     def create_tabs(self):
@@ -63,7 +54,7 @@ class MemBrain_pipeline:
         ]
 
         for i, (button_text, command) in enumerate(buttons_MemBrain):
-            Button(self.main_tab, text=button_text, command=command).grid(row=i+3, column=0, columnspan=2, padx=10, pady=5, sticky="nsew")
+            Button(self.main_tab, text=button_text, command=command,  font=('Helvetica', 10), padx=10, pady=5).grid(row=i+3, column=0, columnspan=2, padx=10, pady=5, sticky="nsew")
 
         # Labels to display selected tomograms and model
         self.odd_label = Label(self.main_tab, text="Tomograms Selected: ")
