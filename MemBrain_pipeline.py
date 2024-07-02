@@ -71,14 +71,14 @@ class MemBrain_pipeline:
         # Method to create the application menu
         menubar = Menu(self.master)
         about_menu = Menu(menubar, tearoff=0)
-        about_menu.add_command(label="À propos", command=self.show_about)
-        menubar.add_cascade(label="À propos", menu=about_menu)
+        about_menu.add_command(label="About", command=self.show_about)
+        menubar.add_cascade(label="About", menu=about_menu)
         self.master.config(menu=menubar)
 
     def show_about(self):
         # Method to show "About" information in a dialog box
-        about_text = '''Cette interface graphique a pour objectif de vous aider à configurer MemBrain. Elle a été réalisée par Tom CREY, stagiaire M1 à l'IBS et au LPCV.'''
-        messagebox.showinfo("À propos", about_text)
+        about_text = '''This Graphical User Interface is designed to help you configure and launch the MemBrain pipeline. It was created by Tom CREY, M1 trainee at IBS and LPCV (Grenoble, FRANCE).'''
+        messagebox.showinfo("About", about_text)
 
     def import_tomo(self):
         # Method to import the tomogram to segment
